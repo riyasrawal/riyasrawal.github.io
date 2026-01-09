@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riya Rawal | Electrical & Computer Engineering</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        header h1 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-links a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 2px solid #667eea;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .contact-links a:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .education-item, .experience-item, .project-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .education-item h3, .experience-item h3, .project-item h3 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .date {
+            color: #667eea;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+        
+        .location {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .skill-category {
+            background: #f4f4f4;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+        
+        .skill-category h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .project-links {
+            margin-top: 0.5rem;
+        }
+        
+        .project-links a {
+            display: inline-block;
+            color: #667eea;
+            text-decoration: none;
+            margin-right: 15px;
+            padding: 5px 10px;
+            border: 1px solid #667eea;
+            border-radius: 3px;
+            font-size: 0.9rem;
+        }
+        
+        .project-links a:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Riya Rawal</h1>
+            <p>Electrical & Computer Engineering Graduate Student</p>
+            <div class="contact-links">
+                <a href="https://github.com/riyasrawal" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/riyarawal" target="_blank">LinkedIn</a>
+                <a href="mailto:your.email@example.com">Email</a>
+            </div>
+        </header>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Graduate student pursuing MS in Electrical and Computer Engineering with focus on wireless telecommunications and IoT. Passionate about embedded systems, circuit design, and innovative hardware solutions. Experienced in PCB design, firmware development, and cross-functional engineering projects.</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Master of Science in Electrical and Computer Engineering</h3>
+                <p class="location">Expected Graduation: May 2026</p>
+                <p>Focus: Wireless Telecommunications and IoT</p>
+            </div>
+            <div class="education-item">
+                <h3>Bachelor of Science in Electrical Engineering</h3>
+                <p class="location">Completed</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Research Assistant</h3>
+                <p class="date">Summer Research Position</p>
+                <ul>
+                    <li>Conducted engineering research projects</li>
+                    <li>Collaborated with faculty on technical initiatives</li>
+                    <li>Managed laboratory equipment and stockroom operations</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            
+            <div class="project-item">
+                <h3>Compact Agriculture Drone</h3>
+                <p>Designed and developed an autonomous agricultural drone system with advanced sensing capabilities for precision agriculture applications.</p>
+                <ul>
+                    <li>Integrated sensor systems for crop monitoring</li>
+                    <li>Developed flight control algorithms</li>
+                    <li>Created comprehensive system architecture and documentation</li>
+                </ul>
+                <div class="project-links">
+                    <a href="https://github.com/riyasrawal/compact-agriculture-drone" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <h3>Flag Reaction Test System</h3>
+                <p>Engineered an embedded system for measuring human reaction times using custom PCB design and firmware development.</p>
+                <ul>
+                    <li>Designed custom PCB with motor driver circuits</li>
+                    <li>Developed embedded C firmware for microcontroller</li>
+                    <li>Implemented real-time measurement and data collection</li>
+                    <li>Created comprehensive bill of materials and circuit documentation</li>
+                </ul>
+                <div class="project-links">
+                    <a href="https://github.com/riyasrawal/flag-reaction-test" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <p>Python, C/C++, Embedded C, MATLAB, Verilog, Assembly</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Hardware & Design</h3>
+                    <p>PCB Design, Circuit Design, FPGA, Microcontrollers, Embedded Systems, 3D Printing</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <p>Git, Linux, AWS, CAD Software, Oscilloscopes, Signal Analyzers</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Engineering Skills</h3>
+                    <p>Firmware Development, Signal Processing, Wireless Communications, IoT Systems, System Architecture</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Riya Rawal. Built with GitHub Pages.</p>
+        </footer>
+    </div>
+</body>
+</html>
