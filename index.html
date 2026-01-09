@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riya Rawal | Electrical & Computer Engineering</title>
+    <title>Riya Rawal | Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -13,245 +13,351 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #f5f0eb;
             min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
             padding: 20px;
         }
         
-        header {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            margin-bottom: 2rem;
+        .header {
             text-align: center;
-        }
-        
-        header h1 {
-            color: #667eea;
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        header p {
-            color: #666;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-        
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .contact-links a {
-            color: #667eea;
-            text-decoration: none;
-            padding: 8px 16px;
-            border: 2px solid #667eea;
-            border-radius: 5px;
-            transition: all 0.3s;
-        }
-        
-        .contact-links a:hover {
-            background: #667eea;
-            color: white;
-        }
-        
-        section {
+            padding: 40px 20px;
             background: white;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
-        h2 {
-            color: #667eea;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 3px solid #667eea;
+        .header h1 {
+            font-size: 2.5rem;
+            color: #2d2d2d;
+            margin-bottom: 10px;
         }
         
-        .education-item, .experience-item, .project-item {
-            margin-bottom: 1.5rem;
-        }
-        
-        .education-item h3, .experience-item h3, .project-item h3 {
-            color: #333;
-            margin-bottom: 0.5rem;
-        }
-        
-        .date {
-            color: #667eea;
-            font-style: italic;
-            font-size: 0.9rem;
-        }
-        
-        .location {
+        .header p {
             color: #666;
-            font-size: 0.9rem;
+            font-size: 1.1rem;
         }
         
-        ul {
-            margin-left: 1.5rem;
-            margin-top: 0.5rem;
+        .products-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .product-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        
+        .product-card h2 {
+            font-size: 1.5rem;
+            color: #2d2d2d;
+            margin-bottom: 10px;
+        }
+        
+        .product-card p {
+            color: #888;
+            font-size: 0.95rem;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .modal.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 2rem;
+            color: #888;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        
+        .close-btn:hover {
+            color: #333;
+        }
+        
+        .modal-content h2 {
+            color: #2d2d2d;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        
+        .modal-content h3 {
+            color: #555;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .modal-content p, .modal-content li {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .modal-content ul {
+            margin-left: 20px;
+        }
+        
+        .links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .links a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #2d2d2d;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+        
+        .links a:hover {
+            background: #555;
         }
         
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
         }
         
-        .skill-category {
-            background: #f4f4f4;
-            padding: 1rem;
-            border-radius: 5px;
+        .skill-item {
+            background: #f5f0eb;
+            padding: 15px;
+            border-radius: 10px;
         }
         
-        .skill-category h3 {
-            color: #667eea;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+        .skill-item h4 {
+            color: #2d2d2d;
+            margin-bottom: 8px;
         }
         
-        .project-links {
-            margin-top: 0.5rem;
-        }
-        
-        .project-links a {
-            display: inline-block;
-            color: #667eea;
-            text-decoration: none;
-            margin-right: 15px;
-            padding: 5px 10px;
-            border: 1px solid #667eea;
-            border-radius: 3px;
+        .skill-item p {
+            color: #666;
             font-size: 0.9rem;
-        }
-        
-        .project-links a:hover {
-            background: #667eea;
-            color: white;
-        }
-        
-        footer {
-            text-align: center;
-            color: white;
-            padding: 2rem;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Riya Rawal</h1>
-            <p>Electrical & Computer Engineering Graduate Student</p>
-            <div class="contact-links">
-                <a href="https://github.com/riyasrawal" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/riyarawal" target="_blank">LinkedIn</a>
-                <a href="mailto:your.email@example.com">Email</a>
-            </div>
-        </header>
+    <div class="header">
+        <h1>Riya Rawal</h1>
+        <p>Electrical & Computer Engineering Portfolio</p>
+        <div class="links">
+            <a href="https://github.com/riyasrawal" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/riyarawal" target="_blank">LinkedIn</a>
+        </div>
+    </div>
 
-        <section id="about">
+    <div class="products-container">
+        <div class="product-card" onclick="openModal('about')">
+            <div class="product-icon">👤</div>
+            <h2>About Me</h2>
+            <p>Click to learn more</p>
+        </div>
+        
+        <div class="product-card" onclick="openModal('education')">
+            <div class="product-icon">🎓</div>
+            <h2>Education</h2>
+            <p>My academic journey</p>
+        </div>
+        
+        <div class="product-card" onclick="openModal('experience')">
+            <div class="product-icon">💼</div>
+            <h2>Experience</h2>
+            <p>Professional background</p>
+        </div>
+        
+        <div class="product-card" onclick="openModal('projects')">
+            <div class="product-icon">🚀</div>
+            <h2>Projects</h2>
+            <p>My engineering work</p>
+        </div>
+        
+        <div class="product-card" onclick="openModal('skills')">
+            <div class="product-icon">⚡</div>
+            <h2>Technical Skills</h2>
+            <p>My expertise</p>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="aboutModal" class="modal" onclick="closeModal('about', event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="close-btn" onclick="closeModal('about')">&times;</button>
             <h2>About Me</h2>
             <p>Graduate student pursuing MS in Electrical and Computer Engineering with focus on wireless telecommunications and IoT. Passionate about embedded systems, circuit design, and innovative hardware solutions. Experienced in PCB design, firmware development, and cross-functional engineering projects.</p>
-        </section>
+        </div>
+    </div>
 
-        <section id="education">
+    <div id="educationModal" class="modal" onclick="closeModal('education', event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="close-btn" onclick="closeModal('education')">&times;</button>
             <h2>Education</h2>
-            <div class="education-item">
-                <h3>Master of Science in Electrical and Computer Engineering</h3>
-                <p class="location">Expected Graduation: May 2026</p>
-                <p>Focus: Wireless Telecommunications and IoT</p>
-            </div>
-            <div class="education-item">
-                <h3>Bachelor of Science in Electrical Engineering</h3>
-                <p class="location">Completed</p>
-            </div>
-        </section>
+            <h3>Master of Science in Electrical and Computer Engineering</h3>
+            <p><strong>Expected Graduation:</strong> May 2026</p>
+            <p><strong>Focus:</strong> Wireless Telecommunications and IoT</p>
+            
+            <h3>Bachelor of Science in Electrical Engineering</h3>
+            <p><strong>Status:</strong> Completed</p>
+        </div>
+    </div>
 
-        <section id="experience">
+    <div id="experienceModal" class="modal" onclick="closeModal('experience', event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="close-btn" onclick="closeModal('experience')">&times;</button>
             <h2>Experience</h2>
-            <div class="experience-item">
-                <h3>Research Assistant</h3>
-                <p class="date">Summer Research Position</p>
-                <ul>
-                    <li>Conducted engineering research projects</li>
-                    <li>Collaborated with faculty on technical initiatives</li>
-                    <li>Managed laboratory equipment and stockroom operations</li>
-                </ul>
-            </div>
-        </section>
+            <h3>Research Assistant</h3>
+            <p><em>Summer Research Position</em></p>
+            <ul>
+                <li>Conducted engineering research projects</li>
+                <li>Collaborated with faculty on technical initiatives</li>
+                <li>Managed laboratory equipment and stockroom operations</li>
+            </ul>
+        </div>
+    </div>
 
-        <section id="projects">
+    <div id="projectsModal" class="modal" onclick="closeModal('projects', event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="close-btn" onclick="closeModal('projects')">&times;</button>
             <h2>Projects</h2>
             
-            <div class="project-item">
-                <h3>Compact Agriculture Drone</h3>
-                <p>Designed and developed an autonomous agricultural drone system with advanced sensing capabilities for precision agriculture applications.</p>
-                <ul>
-                    <li>Integrated sensor systems for crop monitoring</li>
-                    <li>Developed flight control algorithms</li>
-                    <li>Created comprehensive system architecture and documentation</li>
-                </ul>
-                <div class="project-links">
-                    <a href="https://github.com/riyasrawal/compact-agriculture-drone" target="_blank">View on GitHub</a>
-                </div>
+            <h3>Compact Agriculture Drone</h3>
+            <p>Designed and developed an autonomous agricultural drone system with advanced sensing capabilities for precision agriculture applications.</p>
+            <ul>
+                <li>Integrated sensor systems for crop monitoring</li>
+                <li>Developed flight control algorithms</li>
+                <li>Created comprehensive system architecture and documentation</li>
+            </ul>
+            <div class="links">
+                <a href="https://github.com/riyasrawal/compact-agriculture-drone" target="_blank">View on GitHub</a>
             </div>
             
-            <div class="project-item">
-                <h3>Flag Reaction Test System</h3>
-                <p>Engineered an embedded system for measuring human reaction times using custom PCB design and firmware development.</p>
-                <ul>
-                    <li>Designed custom PCB with motor driver circuits</li>
-                    <li>Developed embedded C firmware for microcontroller</li>
-                    <li>Implemented real-time measurement and data collection</li>
-                    <li>Created comprehensive bill of materials and circuit documentation</li>
-                </ul>
-                <div class="project-links">
-                    <a href="https://github.com/riyasrawal/flag-reaction-test" target="_blank">View on GitHub</a>
-                </div>
+            <h3>Flag Reaction Test System</h3>
+            <p>Engineered an embedded system for measuring human reaction times using custom PCB design and firmware development.</p>
+            <ul>
+                <li>Designed custom PCB with motor driver circuits</li>
+                <li>Developed embedded C firmware for microcontroller</li>
+                <li>Implemented real-time measurement and data collection</li>
+                <li>Created comprehensive bill of materials and circuit documentation</li>
+            </ul>
+            <div class="links">
+                <a href="https://github.com/riyasrawal/flag-reaction-test" target="_blank">View on GitHub</a>
             </div>
-        </section>
+        </div>
+    </div>
 
-        <section id="skills">
+    <div id="skillsModal" class="modal" onclick="closeModal('skills', event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="close-btn" onclick="closeModal('skills')">&times;</button>
             <h2>Technical Skills</h2>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
+                <div class="skill-item">
+                    <h4>Programming</h4>
                     <p>Python, C/C++, Embedded C, MATLAB, Verilog, Assembly</p>
                 </div>
-                <div class="skill-category">
-                    <h3>Hardware & Design</h3>
-                    <p>PCB Design, Circuit Design, FPGA, Microcontrollers, Embedded Systems, 3D Printing</p>
+                <div class="skill-item">
+                    <h4>Hardware & Design</h4>
+                    <p>PCB Design, Circuit Design, FPGA, Microcontrollers, 3D Printing</p>
                 </div>
-                <div class="skill-category">
-                    <h3>Tools & Platforms</h3>
-                    <p>Git, Linux, AWS, CAD Software, Oscilloscopes, Signal Analyzers</p>
+                <div class="skill-item">
+                    <h4>Tools & Platforms</h4>
+                    <p>Git, Linux, AWS, CAD Software, Oscilloscopes</p>
                 </div>
-                <div class="skill-category">
-                    <h3>Engineering Skills</h3>
-                    <p>Firmware Development, Signal Processing, Wireless Communications, IoT Systems, System Architecture</p>
+                <div class="skill-item">
+                    <h4>Engineering</h4>
+                    <p>Firmware Development, Signal Processing, Wireless Communications, IoT Systems</p>
                 </div>
             </div>
-        </section>
-
-        <footer>
-            <p>&copy; 2025 Riya Rawal. Built with GitHub Pages.</p>
-        </footer>
+        </div>
     </div>
+
+    <script>
+        function openModal(modalName) {
+            document.getElementById(modalName + 'Modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal(modalName, event) {
+            if (!event || event.target.classList.contains('modal')) {
+                document.getElementById(modalName + 'Modal').classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+        
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                document.querySelectorAll('.modal').forEach(modal => {
+                    modal.classList.remove('active');
+                });
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
 </body>
 </html>
