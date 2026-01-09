@@ -119,6 +119,17 @@
         }
 
         .product-icon {
+                        width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        .product-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
             font-size: 5rem;
             margin-bottom: 25px;
             filter: drop-shadow(0 4px 8px rgba(255,182,193,0.3));
@@ -363,21 +374,21 @@
     <div class="products-shelf">
         <div class="product" onclick="openModal('about')">
             <span class="best-seller">Best Seller</span>
-            <div class="product-icon">💧</div>
+            <div class="product-icon"><img src="https://cdn-icons-png.flaticon.com/512/2553/2553644.png" alt="Serum"></div>
             <div class="product-category">Peptide Glazing Formula</div>
             <h3>About Me</h3>
             <p>Formulated for Success</p>
         </div>
 
         <div class="product" onclick="openModal('education')">
-            <div class="product-icon">🎓</div>
+            <div class="product-icon"><img src="https://cdn-icons-png.flaticon.com/512/2553/2553682.png" alt="Moisturizer"></div>
             <div class="product-category">Advanced Treatment</div>
             <h3>Education</h3>
             <p>Graduate-Level Excellence</p>
         </div>
 
         <div class="product" onclick="openModal('experience')">
-            <div class="product-icon">⚡</div>
+            <div class="product-icon"><img src="https://cdn-icons-png.flaticon.com/512/2553/2553650.png" alt="Toner"></div>
             <div class="product-category">Power Serum</div>
             <h3>Experience</h3>
             <p>Professional Results</p>
@@ -385,14 +396,14 @@
 
         <div class="product" onclick="openModal('projects')">
             <span class="best-seller">Featured</span>
-            <div class="product-icon">🚀</div>
+            <div class="product-icon"><img src="https://cdn-icons-png.flaticon.com/512/2553/2553669.png" alt="Cleanser"></div>
             <div class="product-category">Precision Engineering</div>
             <h3>Projects</h3>
             <p>Clinical-Grade Innovation</p>
         </div>
 
         <div class="product" onclick="openModal('skills')">
-            <div class="product-icon">✨</div>
+            <div class="product-icon"><img src="https://cdn-icons-png.flaticon.com/512/2553/2553707.png" alt="Cream"></div>
             <div class="product-category">Active Ingredients</div>
             <h3>Technical Skills</h3>
             <p>Pure, Potent, Proven</p>
@@ -517,7 +528,7 @@
 
     <footer>
         <p>&copy; 2025 Riya Rawal Engineering Boutique. All formulations handcrafted with precision.</p>
-        <p style="margin-top: 10px; font-size: 0.8rem;">Not tested on animals, only on circuits 🔬✨</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">Not tested on animals, only on circuits 🔬<img src="https://cdn-icons-png.flaticon.com/512/2553/2553707.png" alt="Cream"></p>
     </footer>
 
     <script>
